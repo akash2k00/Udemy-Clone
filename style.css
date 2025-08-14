@@ -17,7 +17,7 @@ body {
     position:sticky;
     top:0;
     background-color: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar-section1__title {
@@ -82,24 +82,40 @@ display:none;
     background-color: #A435F0;
     color: white;
     padding: 10px;
+      cursor:pointer;border:solid #A435F0 1px;
+}
+.categories p:hover{
+    transition:1s;background-color: transparent;
+    color:black;
+    
+  
 }
 .saleImg{  
-    position:relative;}
+    position:relative; 
+}
 .saleImg img {
     width: 100%;
- 
+
 }
 
 .saleImg__offer{ 
     background-color:white;
     color:black;
    width:35%;
-    z-index:2;
+    z-index:1;
     padding:2%;
 position:absolute;
 top:10%;
 left:10%;
-border:solid black 2px;}
+border:solid black 2px;
+opacity:0;
+animation-name:zoom;
+animation-duration:2s;
+animation-fill-mode:forwards;}
+@keyframes zoom{
+    0%{transform:scale(0);opacity:0;}
+    100%{transform:scale(1);opacity:1}
+}
 
 .recommended {
     padding: 10px;
