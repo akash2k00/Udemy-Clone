@@ -242,10 +242,10 @@ body {
 
 @media screen and (max-width:600px) {
     .courseCard {
-      flex-wrap:wrap;
-          flex-grow: 1;
-    flex-basis: 40%;
-    margin: 5px;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-basis: 40%;
+        margin: 5px;
     }
 
     .popular-section {
@@ -261,7 +261,7 @@ body {
         display: none;
     }
 
-    .navbar__s4{
+    .navbar__s4 {
         display: block;
     }
 }
