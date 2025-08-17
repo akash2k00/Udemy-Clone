@@ -14,8 +14,8 @@ body {
     border-bottom: solid black 1px;
     gap: 10px;
     align-items: center;
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
     background-color: white;
     z-index: 2;
 }
@@ -51,20 +51,30 @@ body {
     gap: 10px;
     align-items: center;
 }
-/*MyLearning popup*/
-.MyLearning{position:relative;
-cursor:pointer;}
 
-.MyLearning__popup{position:absolute;
-background-color: white;
-border: solid black 1px;
-width:100px;
-top:150%; padding:20px;
-right:0;
-display:none;
+.navbar__s4 {
+    display: none;
 }
-.MyLearning:hover .MyLearning__popup{
-    display:block;
+
+/*MyLearning popup*/
+.MyLearning {
+    position: relative;
+    cursor: pointer;
+}
+
+.MyLearning__popup {
+    position: absolute;
+    background-color: white;
+    border: solid black 1px;
+    width: 100px;
+    top: 150%;
+    padding: 20px;
+    right: 0;
+    display: none;
+}
+
+.MyLearning:hover .MyLearning__popup {
+    display: block;
 }
 
 
@@ -82,39 +92,53 @@ display:none;
     background-color: #A435F0;
     color: white;
     padding: 10px;
-      cursor:pointer;border:solid #A435F0 1px;
+    cursor: pointer;
+    border: solid #A435F0 1px;
 }
-.categories p:hover{
-    transition:1s;background-color: transparent;
-    color:black;
-    
-  
+
+.categories p:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+
+
 }
-.saleImg{  
-    position:relative; 
+
+.saleImg {
+    position: relative;
 }
+
 .saleImg img {
     width: 100%;
 
 }
 
-.saleImg__offer{ 
-    background-color:white;
-    color:black;
-   width:35%;
-    z-index:1;
-    padding:2%;
-position:absolute;
-top:10%;
-left:10%;
-border:solid black 2px;
-opacity:0;
-animation-name:zoom;
-animation-duration:2s;
-animation-fill-mode:forwards;}
-@keyframes zoom{
-    0%{transform:scale(0);opacity:0;}
-    100%{transform:scale(1);opacity:1}
+.saleImg__offer {
+    background-color: white;
+    color: black;
+    width: 35%;
+    z-index: 1;
+    padding: 2%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border: solid black 2px;
+    opacity: 0;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
 }
 
 .recommended {
@@ -131,7 +155,9 @@ animation-fill-mode:forwards;}
 }
 
 .courseCard {
-    width: 200px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .courseCard img {
@@ -147,7 +173,7 @@ animation-fill-mode:forwards;}
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
-  gap:10px;
+    gap: 10px;
 }
 
 .topics__container p {
@@ -159,41 +185,83 @@ animation-fill-mode:forwards;}
 }
 
 
-.popular-section{ 
-    padding:10px;
+.popular-section {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 
 }
-.popular-section__container{
-display: flex;
+
+.popular-section__container {
+    display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    flex-wrap: wrap; 
-    
+    flex-wrap: wrap;
+
 }
-.popular-section__courseCard img{
-width:100%;
-height:50%;
+
+.popular-section__courseCard img {
+    width: 100%;
+    height: 50%;
 }
+
 .popular-section__courseCard {
     width: 250px;
 }
-.footer{
+
+.footer {
     background-color: black;
-    color:white;
-    padding:30px;
-    
-   
-    
+    color: white;
+    padding: 30px;
+
 }
-.footer-one{
-    display:flex;
-    gap:10px;
+
+.footer-one {
+    display: flex;
+    gap: 10px;
 }
-.footer-one p{margin:20px;}
+
+.footer-one p {
+    margin: 20px;
+}
 
 
-.footer-two{margin:20px;
-align-items:center;
-    display:flex;
+.footer-two {
+    margin: 20px;
+    align-items: center;
+    display: flex;
     justify-content: space-between;
+}
+
+/* media queries */
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .courseCard {
+      flex-wrap:wrap;
+          flex-grow: 1;
+    flex-basis: 40%;
+    margin: 5px;
+    }
+
+    .popular-section {
+        flex-basis: 40%;
+    }
+
+    .categories {
+        display: none;
+    }
+
+    .navbar-section2,
+    .navbar-section3 {
+        display: none;
+    }
+
+    .navbar__s4{
+        display: block;
+    }
 }
